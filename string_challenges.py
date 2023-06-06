@@ -16,6 +16,8 @@ for i in word:
     if i.lower() == 'а':
         count += 1
 print(f'Количество букв "а" в слове {word}: {count}')
+#var3
+print('Количество букв "а" в слове:', word.lower().count('а'))
 
 
 # Вывести количество гласных букв в слове
@@ -25,7 +27,8 @@ for char in word:
     if char in "аеёиоуыэюяАЕЁИОУЫЭЮЯ":
         count += 1
 print("Количество гласных букв:", count)
-
+#var2
+print("Гласных букв в слове:", sum([word.lower().count(letter) for letter in 'аеиоуюя']))
 
 # Вывести количество слов в предложении
 sentence = 'Мы приехали в гости'

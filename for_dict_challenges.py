@@ -1,3 +1,4 @@
+from collections import Counter
 # Задание 1
 # Дан список учеников, нужно посчитать количество повторений каждого имени ученика
 # Пример вывода:
@@ -20,6 +21,11 @@ for name in students:
         list_st.append(name['first_name'])
         print(f"{name['first_name']}: {students.count(name)}")
 
+#var2
+names = [person['first_name'] for person in students]
+ctr = Counter(names)
+for name, count in ctr.items():
+    print(f"{name}: {count}")
 
 # Задание 2
 # Дан список учеников, нужно вывести самое часто повторящееся имя
@@ -45,7 +51,10 @@ for name in students:
             name_st = name['first_name']
 
 print(f"Самое частое имя среди учеников: {name_st}")
-
+#var2
+names = [person['first_name'] for person in students]
+ctr = Counter(names)
+print(f'Самое частое имя среди учеников: {max(ctr, key=ctr.get)}')
 
 # Задание 3
 # Есть список учеников в нескольких классах, нужно вывести самое частое имя в каждом классе.
